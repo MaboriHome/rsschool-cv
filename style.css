@@ -83,6 +83,11 @@ body {
   min-width: 170px;
 }
 
+.example {
+  background-color: #95a1ddd5;
+  padding: 15px;
+}
+
 .title {
   color: #fff;
   text-transform: uppercase;
