@@ -27,8 +27,6 @@ html {
 }
 
 .nav-list {
-  display: flex;
-  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0 20px;
@@ -40,7 +38,6 @@ html {
 }
 
 .header {
-  position: relative;
   max-width: 100px;
   max-height: 1000px;
   background-color: #7c7070;
