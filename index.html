@@ -1,11 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="style.css" >
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>My CV</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container-box">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#contacts" class="nav-link">Contacts</a>
+            </li>
+            <li class="nav-item">
+              <a href="#interest" class="nav-link">Interest</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#education" class="nav-link">Education</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container-box">
+        <div class="container">
+          <div class="left-side">
+            <div class="profileText">
+              <div class="imgbx">
+                <img src="img.jpg" class="img" alt="my foto" />
+              </div>
+              <h2>Makeev Alexey <br /><span>studying web development</span></h2>
+            </div>
+            <div class="contact-info" id="contacts">
+              <h3 class="title">Contact Info</h3>
+              <ul>
+                <li>
+                  <span class="icon"
+                    ><i class="fa fa-phone" aria-hidden="true"></i
+                  ></span>
+                  <span class="text">+7 928 471 44 25</span>
+                </li>
+                <li>
+                  <span class="icon"
+                    ><i class="fa fa-envelope" aria-hidden="true"></i
+                  ></span>
+                  <span class="text"
+                    ><a href="mailto:makeevhome@mail.ru"
+                      >makeevhome@mail.ru</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <span class="icon"
+                    ><i class="fa fa-globe" aria-hidden="true"></i
+                  ></span>
+                  <span class="text"
+                    ><a href="ya.ru">www.mywebsite.com</a></span
+                  >
+                </li>
+                <li>
+                  <span class="icon"
+                    ><i class="fa fa-telegram" aria-hidden="true"></i
+                  ></span>
+                  <span class="text">@Mabori1</span>
+                </li>
+                <li>
+                  <span class="icon"
+                    ><i class="fa fa-github" aria-hidden="true"></i
+                  ></span>
+                  <span class="text"
+                    ><a href="https://github.com/MaboriHome"
+                      >maborihome</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <span class="icon"
+                    ><i class="fa fa-map-marker" aria-hidden="true"></i
+                  ></span>
+                  <span class="text">Russia, Krasnodar</span>
+                </li>
+              </ul>
+            </div>
+            <div class="contact-info education">
+              <h3 class="title" id="education">Education</h3>
+              <ul>
+                <li>
+                  <h5>1992-2016</h5>
+                  <h4>earned a military pension</h4>
+                </li>
+                <li>
+                  <h5>2016-2021</h5>
+                  <h4>built a house, improved the economy</h4>
+                </li>
+                <li>
+                  <h5>2022</h5>
+                  <h4>
+                    <a href="https://htmlacademy.ru/profile/mabori"
+                      >htmlAcademy</a
+                    >
+                  </h4>
+                  <h4><a href="https://gb.ru/users/7797502">GeekBrains</a></h4>
+                </li>
+              </ul>
+            </div>
+            <div class="contact-info language">
+              <h3 class="title">Language</h3>
+              <ul>
+                <li>
+                  <span class="text">Russian - native</span>
+                </li>
+                <li>
+                  <span class="text">English - A1</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="about">
+              <h2 class="title2">Profile</h2>
+              <p>
+                I am a military pensioner. Built a house, planted a garden.
+                Tired of playing "World of Tanks". I decided to spend my time
+                usefully. To help people. I've wanted to do programming for a
+                long time. I have a lot of time and desire to do programming.
+              </p>
+            </div>
+            <div class="about">
+              <h2 class="title2">Code Example</h2>
+              <div class="example">
+                <pre>
+              function multiply(a, b){
+                  return a * b
+              }
+
+              let result = multiply(3, 3);
+              alert(result);
+
+            </pre
+                >
+              </div>
+            </div>
+            <div class="about">
+              <h2 class="title2">Experience</h2>
+            </div>
+            <div class="about">
+              <h2 class="title2" id="skills">Skills</h2>
+              <ul>
+                <li>
+                  <h4>HTML (basic)</h4>
+                </li>
+                <li>
+                  <h4>CSS (basic)</h4>
+                </li>
+                <li>
+                  <h4>JavaScript (basic)</h4>
+                </li>
+                <li>
+                  <h4>Git (basic)</h4>
+                </li>
+              </ul>
+            </div>
+            <div class="about interest">
+              <h2 class="title2" id="interest">Interest</h2>
+              <ul>
+                <li>
+                  <i class="fa fa-gamepad" aria-hidden="true"></i> World of
+                  Tanks
+                </li>
+                <li><i class="fa fa-heart" aria-hidden="true"></i> Yoga</li>
+                <li>
+                  <i class="fa fa-cog" aria-hidden="true"></i> Working with wood
+                </li>
+                <li><i class="fa fa-motorcycle" aria-hidden="true"></i> ATV</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container-box footer-container">
+        <div>
+          © 2022
+          <a href="https://github.com/MaboriHome" class="github nav-link"
+            >MaboriHome</a
+          >
+        </div>
+        <a href="https://rs.school/js/" class="rss"></a>
+      </div>
+    </footer>
+  </body>
 </html>
