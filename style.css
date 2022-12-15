@@ -27,6 +27,8 @@ html {
 }
 
 .nav-list {
+  display: flex;
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0 20px;
@@ -38,10 +40,11 @@ html {
 }
 
 .header {
-  max-width: 100px;
-  max-height: 1000px;
   background-color: #7c7070;
-  padding: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  min-width: 320px;
 }
 
 .container {
@@ -202,13 +205,15 @@ ul li .fa {
 }
 a {
   color: #fff;
+  font-size: 18px;
 }
 
 .footer {
   background-color: #7c7070;
+  padding: 20px;
   width: 100%;
-  padding: 10px;
-  border: 5 px solid #000;
+  max-width: 1000px;
+  min-width: 320px;
 }
 
 .footer-container {
@@ -217,7 +222,20 @@ a {
   align-items: center;
   margin: 0 auto;
   color: #fff;
-  padding: 20px;
+}
+
+.github {
+  color: #fff;
+  text-decoration: none;
+  line-height: 45px;
+}
+
+.rss {
+  width: 121px;
+  height: 45px;
+  background-image: url('./imd/rs_school_js.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 1070px) {
