@@ -615,3 +615,140 @@ body {
   padding: 14px 27px;
 }
 /* welcome style end */
+
+/* about style start */
+
+.about {
+  background-color: #fff;
+}
+.about__section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+h2 {
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499a18;
+}
+.about__h2 {
+  margin-bottom: 40px;
+  max-width: 463px;
+  max-height: 102px;
+}
+.about__span {
+  color: #e06733;
+}
+
+.about__p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #636060;
+  max-width: 605px;
+  max-height: 208px;
+}
+.about__img {
+  margin: 94px 0;
+}
+/* about style end */
+
+/* service style start */
+.service {
+  background-color: #edf2ec;
+  max-height: 1300px;
+}
+
+.service__section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.service__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1007px;
+  max-height: 94px;
+  width: 100%;
+  margin-bottom: 90px;
+}
+.service__h2 {
+  max-width: 306px;
+}
+
+.service__btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 559px;
+}
+
+.btn {
+  margin-right: 38px;
+  width: 161px;
+  height: 50px;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+}
+.btn:last-child {
+  margin-right: 0;
+}
+h3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #e06733;
+}
+.service__p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #717171;
+}
+.service__cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  max-width: 1220px;
+}
+.service__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 330px;
+  max-height: 450px;
+  border-radius: 20px 20px 0px 0px;
+  margin-bottom: 55px;
+}
+.service__img {
+  margin-bottom: 10px;
+}
+.service__h3 {
+  margin-bottom: 10px;
+}
+.service__p {
+  margin-bottom: 36px;
+}
+
+/* service style end */
