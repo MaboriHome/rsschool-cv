@@ -741,14 +741,122 @@ h3 {
   border-radius: 20px 20px 0px 0px;
   margin-bottom: 55px;
 }
-.service__img {
-  margin-bottom: 10px;
-}
 .service__h3 {
   margin-bottom: 10px;
 }
 .service__p {
   margin-bottom: 36px;
 }
+.service__rectangle {
+  width: 330px;
+  height: 100px;
+  border: 1px solid #e3e1d5;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* service style end */
+/* prices style start */
+
+.prices {
+  background-color: #fff;
+  max-height: 560px;
+  height: 100%;
+}
+.prices__wrapper {
+  max-width: 1220px;
+  max-height: 405px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.prices__rectangle {
+  position: absolute;
+  width: 332px;
+  height: 282px;
+
+  border: 1px solid #e3e1d5;
+  border-radius: 20px;
+  padding: 34px 41px;
+}
+.prices__h2 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+.prices__items {
+  max-width: 250px;
+  max-height: 214px;
+}
+.rectangle__item {
+  width: 250px;
+  height: 50px;
+  background: #edf2ec;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 32px;
+}
+.prices__img {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.h3__bold {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+}
+.price__item {
+  display: flex;
+  flex-direction: column;
+}
+.prices__span {
+  color: #499a18;
+}
+.prices__text {
+  max-width: 452px;
+  max-height: 191px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.prices__rectangle-btn {
+  width: 162px;
+  max-height: 50px;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  height: 100%;
+  margin-bottom: 39px;
+}
+.h3__btn {
+  width: 98px;
+  height: 26px;
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+
+  text-align: center;
+  margin: 12px 30px;
+}
+.prices__leafs {
+  margin-bottom: 115px;
+}
+/* prices style end */
