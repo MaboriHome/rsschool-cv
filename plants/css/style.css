@@ -819,6 +819,12 @@ h3 {
   align-items: center;
   justify-content: space-around;
   margin-bottom: 32px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
 }
 .rectangle__item:hover {
   background: #d5f0cf;
@@ -826,15 +832,6 @@ h3 {
 .prices__img {
   max-width: 16px;
   max-height: 16px;
-}
-
-.h3__bold {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 20px;
-  color: #000000;
 }
 .price__item {
   display: flex;
