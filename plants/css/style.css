@@ -614,6 +614,9 @@ body {
   border-radius: 10px;
   padding: 14px 27px;
 }
+.welcome__button:hover {
+  background: rgb(190, 239, 151);
+}
 /* welcome style end */
 
 /* about style start */
@@ -707,6 +710,9 @@ h2 {
 }
 .btn:last-child {
   margin-right: 0;
+}
+.btn:hover {
+  background: rgb(167, 234, 134);
 }
 h3 {
   font-family: 'Inter';
@@ -802,11 +808,15 @@ h3 {
   width: 250px;
   height: 50px;
   background: #edf2ec;
+  border: #edf2ec;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 32px;
+}
+.rectangle__item:hover {
+  background: #d5f0cf;
 }
 .prices__img {
   max-width: 16px;
@@ -843,6 +853,10 @@ h3 {
   border-radius: 5px;
   height: 100%;
   margin-bottom: 39px;
+}
+.prices__rectangle-btn:hover {
+  background: rgb(182, 228, 151);
+  cursor: pointer;
 }
 .h3__btn {
   width: 98px;
