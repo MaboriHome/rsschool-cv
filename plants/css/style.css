@@ -850,26 +850,23 @@ h3 {
 }
 .prices__rectangle-btn {
   width: 162px;
-  max-height: 50px;
+  height: 50px;
   border: 1px solid #e06733;
   border-radius: 5px;
-  height: 100%;
   margin-bottom: 39px;
-}
-.prices__rectangle-btn:hover {
-  background: rgb(182, 228, 151);
-}
-.h3__btn {
-  width: 98px;
-  height: 26px;
+
   font-family: 'Inika';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-
   text-align: center;
-  margin: 12px 30px;
+  color: #e06733;
+  padding: 12px 30px;
+  background: #fff;
+}
+.prices__rectangle-btn:hover {
+  background: rgb(182, 228, 151);
 }
 .prices__leafs {
   margin-bottom: 115px;
