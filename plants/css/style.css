@@ -38,6 +38,7 @@ samp,
 small,
 strike,
 strong,
+footer,
 sub,
 sup,
 tt,
@@ -71,7 +72,6 @@ details,
 embed,
 figure,
 figcaption,
-footer,
 header,
 hgroup,
 menu,
@@ -110,10 +110,6 @@ menu,
 nav,
 section {
   display: block;
-}
-
-body {
-  line-height: 1;
 }
 
 ol,
@@ -496,6 +492,9 @@ body {
   line-height: 1.2;
   font-weight: normal;
   color: #000;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* header style start */
@@ -557,8 +556,8 @@ body {
 
 /* welcome style start */
 .main {
-  height: 100vh;
   background-color: #edf2ec;
+  flex-grow: 1;
 }
 
 .welcome__section {
@@ -736,6 +735,7 @@ h3 {
   align-items: start;
   justify-content: space-between;
   max-width: 1220px;
+  margin-bottom: 50px;
 }
 .service__card {
   display: flex;
@@ -769,17 +769,22 @@ h3 {
 
 .prices {
   background-color: #fff;
-  max-height: 560px;
+  height: 560px;
   height: 100%;
+  padding-bottom: 100px;
 }
 .prices__wrapper {
   max-width: 1220px;
   max-height: 405px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-content: space-between;
   justify-content: space-between;
   margin: 0 auto;
+}
+.prices__box {
+  width: 332px;
+  height: 391px;
 }
 .prices__rectangle {
   position: absolute;
@@ -856,7 +861,6 @@ h3 {
 }
 .prices__rectangle-btn:hover {
   background: rgb(182, 228, 151);
-  cursor: pointer;
 }
 .h3__btn {
   width: 98px;
@@ -879,7 +883,7 @@ h3 {
 
 .contacts {
   background-color: #edf2ec;
-  max-height: 550px;
+  height: 550px;
 }
 
 .contacts__container {
@@ -930,5 +934,41 @@ h3 {
 .contacts__accordion {
   margin-right: 35px;
 }
-
 /* contacts style end */
+
+/* footer style start */
+
+.footer {
+  background: #fff;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1220px;
+  max-height: 50px;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+.h3__footer {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  color: #000000;
+}
+.ul__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 188px;
+}
+.github {
+  text-decoration: none;
+}
+.li__social {
+  cursor: pointer;
+}
+
+/* footer style end */
