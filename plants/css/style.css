@@ -874,3 +874,61 @@ h3 {
   margin-bottom: 115px;
 }
 /* prices style end */
+
+/* contacts style start */
+
+.contacts {
+  background-color: #edf2ec;
+  max-height: 550px;
+}
+
+.contacts__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1220px;
+  padding-top: 53px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact_woman {
+  padding-top: 53px;
+}
+.h2__bold {
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+
+  color: #499a18;
+}
+.contacts__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  max-width: 450px;
+  background: #d6e7d2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
+  width: 100%;
+  margin-top: 88px;
+}
+
+.contacts__h3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #717171;
+  margin-left: 20px;
+}
+.contacts__accordion {
+  margin-right: 35px;
+}
+
+/* contacts style end */
