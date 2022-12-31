@@ -96,7 +96,7 @@ html {
   object-fit: cover;
 }
 
-.profileText h2 {
+.profileText h1 {
   color: #fff;
   font-size: 1.5em;
   margin-top: 20px;
@@ -106,7 +106,7 @@ html {
   line-height: 1.4em;
 }
 
-.profileText h2 span {
+.profileText h1 span {
   font-size: 0.8em;
   font-weight: 300;
 }
