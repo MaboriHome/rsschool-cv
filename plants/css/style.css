@@ -589,6 +589,8 @@ body {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
+  width: 448px;
+  height: 407px;
   font-size: 20px;
   line-height: 35px;
   color: #636060;
@@ -630,7 +632,9 @@ body {
   justify-content: space-between;
   max-width: 1220px;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
+
 h2 {
   font-family: 'Inika';
   font-style: normal;
@@ -676,6 +680,7 @@ h2 {
   justify-content: space-between;
   max-width: 1220px;
   margin: 0 auto;
+  margin-bottom: 14px;
 }
 .service__content {
   display: flex;
@@ -706,6 +711,14 @@ h2 {
   height: 50px;
   border: 1px solid #e06733;
   border-radius: 5px;
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  /* identical to box height */
+
+  color: #e06733;
 }
 .btn:last-child {
   margin-right: 0;
@@ -771,7 +784,7 @@ h3 {
   background-color: #fff;
   height: 560px;
   height: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 174px;
 }
 .prices__wrapper {
   max-width: 1220px;
@@ -853,7 +866,8 @@ h3 {
   height: 50px;
   border: 1px solid #e06733;
   border-radius: 5px;
-  margin-bottom: 39px;
+  margin-bottom: 37px;
+  margin-top: -16px;
 
   font-family: 'Inika';
   font-style: normal;
@@ -941,7 +955,7 @@ h3 {
   align-items: center;
   max-width: 1220px;
   max-height: 50px;
-  padding: 40px 0;
+  padding: 58px 0px;
   margin: 0 auto;
 }
 .h3__footer {
