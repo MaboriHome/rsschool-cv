@@ -570,8 +570,11 @@ body {
 }
 
 .welcome__img {
+  width: 448px;
   margin: 62px 0;
+  height: 407px;
 }
+
 .welcome__text {
   max-width: 549px;
   max-height: 340px;
@@ -583,14 +586,14 @@ body {
   font-size: 45px;
   line-height: 50px;
   color: #717171;
-  margin-bottom: 42px;
+  margin-bottom: 47px;
 }
 .welcome__p {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  width: 448px;
-  height: 407px;
+  width: 525px;
+  height: 105px;
   font-size: 20px;
   line-height: 35px;
   color: #636060;
@@ -613,7 +616,7 @@ body {
   color: #000000;
   border: 2px solid #e06733;
   border-radius: 10px;
-  padding: 14px 27px;
+  padding: 9px 27px;
 }
 .welcome__button:hover {
   background: rgb(190, 239, 151);
@@ -915,6 +918,7 @@ h3 {
   line-height: 52px;
 
   color: #499a18;
+  padding-left: 44px;
 }
 .contacts__form {
   display: flex;
