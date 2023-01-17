@@ -1,15 +1,10 @@
-const str = `Ваша оценка - 65 баллов
+const str = `Ваша оценка - 70 баллов
 Отзыв по пунктам ТЗ:
 Не выполненные/не засчитанные пункты:
-1) при нажатии на бургер-иконку плавно появляется адаптивное меню
 
-2) адаптивное меню соответствует цветовой схеме макета
+1) ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям (все, кроме Account, она пока просто закрывает меню)
 
-3) при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран
-
-4) ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям (все, кроме Account, она пока просто закрывает меню)
-
-5) при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, также скрытие меню происходит если сделать клик вне данного окна
+2) при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, также скрытие меню происходит если сделать клик вне данного окна
 
 Выполненные пункты:
 1) Блок header
@@ -48,3 +43,22 @@ const str = `Ваша оценка - 65 баллов
 
 `
 console.log(str);
+
+
+
+onBurgerClick = (evt) => {
+
+  document.querySelector('.header__nav').classList.add('header__nav_active');
+  document.querySelector('.burger').classList.add('burger__none')
+};
+
+onBurgerClose = () => {
+  document.querySelector('.header__nav').classList.remove('header__nav_active');
+  document.querySelector('.burger').classList.remove('burger__none')
+  removeEventListener(onBurgerClick);
+}
+
+const burgerElement = document.querySelector('.burger')
+  .addEventListener('click', onBurgerClick);
+
+document.querySelector('.header__nav-close').addEventListener('click', onBurgerClose);
