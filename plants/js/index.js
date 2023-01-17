@@ -54,8 +54,7 @@ onBurgerClick = (evt) => {
 
 onBurgerClose = () => {
   document.querySelector('.header__nav').classList.remove('header__nav_active');
-  document.querySelector('.burger').classList.remove('burger__none')
-  removeEventListener(onBurgerClick);
+  document.querySelector('.burger').classList.remove('burger__none');  
 }
 
 const burgerElement = document.querySelector('.burger')
