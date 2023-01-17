@@ -913,7 +913,15 @@ select {
     top: 0;
     z-index: 10;
     padding: 75px;
+    background-color: #edf2ec;
     transform: translateX(100%);
+    transition: 0.2s all linear;
+  }
+  .header__nav_active {
+    transform: translateY(0);
+  }
+  .burger__none {
+    display: none;
   }
 
   .li__header {
