@@ -1,63 +1,171 @@
-const str = `Ваша оценка - 70 баллов
-Отзыв по пунктам ТЗ:
-Не выполненные/не засчитанные пункты:
 
-1) ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям (все, кроме Account, она пока просто закрывает меню)
+let queue = [];
+const serviceBtn = document.querySelector('.wrap_btns');
 
-2) при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, также скрытие меню происходит если сделать клик вне данного окна
 
-Выполненные пункты:
-1) Блок header
+serviceBtn.addEventListener('click', (evt) => {
+  if (evt.target.id) {
 
-2) Секция welcome
+    if (queue.includes(evt.target.id)) {
+      let index = queue.indexOf(evt.target.id);
+      queue.splice(index, 1);
+    } else {
+      queue.push(evt.target.id);
+    }
 
-3) Секция about
+    if (queue.length === 3) {
+      queue.shift();
+    }
+    document.querySelectorAll('.service__list_item')
+      .forEach((item) => item.classList.add('service__list_item-blur'));
 
-4) Секция service
+    document.querySelectorAll('.service__nav_btn')
+      .forEach((item) => item.classList.remove('service__nav_btn-focus'));
 
-5) Секция prices
+    queue.forEach((quItem) => document.querySelectorAll(`.service__list_item-${quItem}`)
+      .forEach((item) => item.classList.remove('service__list_item-blur')));
 
-6) Секция contacts
-
-7) Блок footer
-
-8) Блок header
-
-9) Секция welcome
-
-10) Секция about
-
-11) Секция service
-
-12) Секция prices
-
-13) Секция contacts
-
-14) Блок footer
-
-15) нет полосы прокрутки при ширине страницы от 1440рх до 380px
-
-16) нет полосы прокрутки при ширине страницы от 380px до 320рх
-
-17) при ширине страницы 380рх панель навигации скрывается, появляется бургер-иконка
-
-`
-console.log(str);
+    queue.forEach((item) => document.querySelector(`.btn-${item}`)
+      .classList.add('service__nav_btn-focus'))
+  }
+});
 
 
 
-onBurgerClick = (evt) => {
 
-  document.querySelector('.header__nav').classList.add('header__nav_active');
-  document.querySelector('.burger').classList.add('burger__none')
-};
+(function () {
+  const burgerItem = document.querySelector('div.burger');
+  const menu = document.querySelector('nav.nav');
+  const menuCloseItem = document.querySelector('div.nav-close');
+  const menuLinks = document.querySelectorAll('a.nav-link');
+  burgerItem.addEventListener('click', () => {
+    menu.classList.add('nav-active');
+  });
+  menuCloseItem.addEventListener('click', () => {
+    menu.classList.remove('nav-active');
+  });
+  if (window.innerWidth < 798) {
+    for (let i = 0; i < menuLinks.length; i += 1) {
+      menuLinks[i].addEventListener('click', () => {
+        menu.classList.remove('nav-active');
+      });
+    }
+  }
+}());
 
-onBurgerClose = () => {
-  document.querySelector('.header__nav').classList.remove('header__nav_active');
-  document.querySelector('.burger').classList.remove('burger__none');  
-}
+(function () {
 
-const burgerElement = document.querySelector('.burger')
-  .addEventListener('click', onBurgerClick);
+  const smoothScroll = function (targetEl, duration) {
+    const headerElHeight = document.querySelector('header.header').clientHeight;
+    let target = document.querySelector(targetEl);
+    let targetPosition = target.getBoundingClientRect().top - headerElHeight;
+    let startPosition = window.pageYOffset;
+    let startTime = null;
 
-document.querySelector('.header__nav-close').addEventListener('click', onBurgerClose);
+    const ease = function (t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    const animation = function (currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = ease(timeElapsed, startPosition, targetPosition, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+    requestAnimationFrame(animation);
+
+  };
+
+  const scrollTo = function () {
+    const links = document.querySelectorAll('a.js-scroll');
+    links.forEach(each => {
+      each.addEventListener('click', function () {
+        const currentTarget = this.getAttribute('href');
+        smoothScroll(currentTarget, 1000);
+      });
+    });
+  };
+  scrollTo();
+}());
+
+
+const priceBasics = document.getElementById("myDropdown-basics");
+const priceStandard = document.getElementById('myDropdown-standard');
+const priceProCare = document.getElementById('myDropdown-procare');
+const priceBtnBasics = document.querySelector('.item-1');
+const priceBtnStandard = document.querySelector('.item-2');
+const priceBtnProcare = document.querySelector('.item-3');
+
+priceBtnBasics.addEventListener('click', (evt) => {
+  evt.preventDefault;
+  priceStandard.classList.remove('show');
+  priceProCare.classList.remove('show');
+  priceBasics.classList.toggle('show');
+});
+
+priceBtnStandard.addEventListener('click', (evt) => {
+  evt.preventDefault;
+  priceProCare.classList.remove('show');
+  priceBasics.classList.remove('show');
+  priceStandard.classList.toggle('show');
+});
+
+priceBtnProcare.addEventListener('click', (evt) => {
+  evt.preventDefault;
+  priceBasics.classList.remove('show');
+  priceStandard.classList.remove('show');
+  priceProCare.classList.toggle('show');
+});
+
+priceBasics.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  if (evt.target.tagName !== "A") {
+    priceBasics.classList.toggle('show');
+  }
+});
+
+priceStandard.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  if (evt.target.tagName !== "A") {
+    priceStandard.classList.toggle('show');
+  }
+});
+
+priceProCare.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  if (evt.target.tagName !== "A") {
+    priceProCare.classList.toggle('show');
+  }
+});
+
+
+const cityOption = document.getElementById('city');
+const cityCanandaigua = document.querySelector('.canandaigua');
+const cityNewYorkCity = document.querySelector('.new-york-city');
+const cityYonkers = document.querySelector('.yonkers');
+const citySherrill = document.querySelector('.sherrill');
+const allCity = document.querySelectorAll('.card__city');
+
+
+cityOption.addEventListener('change', (evt) => {
+  evt.preventDefault;
+
+  allCity.forEach((item) => item.classList.add('card__city-hidden'));
+
+  if (evt.target.options.selectedIndex === 1) {
+    cityCanandaigua.classList.remove('card__city-hidden');
+  }
+  if (evt.target.options.selectedIndex === 2) {
+    cityNewYorkCity.classList.remove('card__city-hidden');
+  }
+  if (evt.target.options.selectedIndex === 3) {
+    cityYonkers.classList.remove('card__city-hidden');
+  }
+  if (evt.target.options.selectedIndex === 4) {
+    citySherrill.classList.remove('card__city-hidden');
+  }
+});
