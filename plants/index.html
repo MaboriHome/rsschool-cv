@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="back_color">
+  <header class="back_color header">
     <div class="container header__container">
       <div class="header__logo">
         <div class="logo__img">
@@ -18,25 +18,25 @@
         </div>
         <p class="logo__text">Plants</p>
       </div>
-      <nav class="header__nav">
+      <nav class="header__nav nav">
         <ul class="menu header__menu">
           <li class='li__header'>
-            <a class="link menu__item active" href="#welcome">Home</a>
+            <a class="link menu__item nav-link js-scroll active" href="#welcome">Home</a>
           </li>
           <li class='li__header'>
-            <a class="link menu__item" href="#about">About us</a>
+            <a class="link menu__item nav-link js-scroll" href="#about">About us</a>
           </li>
           <li class='li__header'>
-            <a class="link menu__item" href="#service">Service</a>
+            <a class="link menu__item nav-link js-scroll" href="#service">Service</a>
           </li>
           <li class='li__header'>
-            <a class="link menu__item" href="#price">Price</a>
+            <a class="link menu__item nav-link js-scroll" href="#price">Price</a>
           </li>
           <li class='li__header'>
-            <a class="link menu__item" href="#contacts">Contacts</a>
+            <a class="link menu__item nav-link js-scroll" href="#contacts">Contacts</a>
           </li>
         </ul>
-        <div class="header__nav-close">
+        <div class="header__nav-close nav-close">
           <span class="header__nav-close-line"></span>
           <span class="header__nav-close-line"></span>
         </div>
@@ -81,48 +81,48 @@
         <div class="service__nav">
           <h2 class="h2 service__title">Service and our projects</h2>
           <div class="wrap_btns">
-            <button class="btn service__nav_btn">Gardens</button>
-            <button class="btn service__nav_btn">Lawn</button>
-            <button class="btn service__nav_btn">Planting</button>
+            <button class="btn service__nav_btn btn-garden" id='garden'>Gardens</button>
+            <button class="btn service__nav_btn btn-lawn" id='lawn'>Lawn</button>
+            <button class="btn service__nav_btn btn-planting" id='planting'>Planting</button>
           </div>
         </div>
         <div class="service__list">
-          <div class="service__list_item">
+          <div class="service__list_item service__list_item-garden">
             <div class="service__list_img bg1"></div>
             <div class="service__list_about">
-              <p class="service_name">Garden care</p>
+              <p class="service_name ">Garden care</p>
               <p class="service_text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div class="service__list_item">
+          <div class="service__list_item service__list_item-planting">
             <div class="service__list_img bg2"></div>
             <div class="service__list_about">
               <p class="service_name">Planting</p>
               <p class="service_text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div class="service__list_item">
+          <div class="service__list_item service__list_item-lawn">
             <div class="service__list_img bg3"></div>
             <div class="service__list_about">
               <p class="service_name">Lawn care</p>
               <p class="service_text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div class="service__list_item">
+          <div class="service__list_item service__list_item-lawn">
             <div class="service__list_img bg4"></div>
             <div class="service__list_about">
-              <p class="service_name">Planting</p>
+              <p class="service_name">Lawn care</p>
               <p class="service_text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div class="service__list_item">
+          <div class="service__list_item service__list_item-garden">
             <div class="service__list_img bg5"></div>
             <div class="service__list_about">
               <p class="service_name">Garden care</p>
               <p class="service_text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div class="service__list_item">
+          <div class="service__list_item service__list_item-planting">
             <div class="service__list_img bg6"></div>
             <div class="service__list_about">
               <p class="service_name">Planting</p>
@@ -136,24 +136,95 @@
       <div class="container prices__container">
         <div class="prices__rates">
           <h2 class="prices__title">Prices</h2>
-          <div class="prices__accordion">
-            <div class="accordion__item item-1">
-              <div class="accordion__title">
+          <div class="prices__accordion dropdown">
+            <button class="accordion__item item-1 dropbtn">
+              <div id='basics' class=" accordion__title">
                 <h4 class="rate">Basics</h4>
                 <div class="circle"></div>
               </div>
+            </button>
+            <div id="myDropdown-basics" class="dropdown-content dropdown-content-basics">
+              <div class=" accordion__title">
+                <h4 class="rate">Basics</h4>
+                <div class="circle-drop"></div>
+              </div>
+              <div class="line-drop"></div>
+              <p class="text-drop">
+                Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+              </p>
+              <h3 class="price-drop">
+                <span class="price-span">
+                  <span class="price-span-baks">
+                    $
+                  </span>
+                  15
+                </span> / per hour
+              </h3>
+              <button class="price__order-btn">
+                <a href="#contacts" class="link js-scroll price__contacts">
+                  Order
+                </a>
+              </button>
             </div>
-            <div class="accordion__item item-2">
-              <div class="accordion__title">
+
+            <button class="accordion__item item-2 dropbtn">
+              <div id='standard' class=" accordion__title">
                 <h4 class="rate">Standard</h4>
                 <div class="circle"></div>
               </div>
+            </button>
+            <div id="myDropdown-standard" class="dropdown-content dropdown-content-standard">
+              <div class=" accordion__title">
+                <h4 class="rate">Standard</h4>
+                <div class="circle-drop"></div>
+              </div>
+              <div class="line-drop"></div>
+              <p class="text-drop">
+                Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+              </p>
+              <h3 class="price-drop">
+                <span class="price-span">
+                  <span class="price-span-baks">
+                    $
+                  </span>
+                  25
+                </span> / per hour
+              </h3>
+              <button class="price__order-btn">
+                <a href="#contacts" class="link js-scroll price__contacts">
+                  Order
+                </a>
+              </button>
             </div>
-            <div class="accordion__item item-3">
-              <div class="accordion__title">
+
+            <button class="accordion__item item-3 dropbtn">
+              <div id='procare' class=" accordion__title">
                 <h4 class="rate">Pro care</h4>
                 <div class="circle"></div>
               </div>
+            </button>
+            <div id="myDropdown-procare" class="dropdown-content dropdown-content-procare">
+              <div class=" accordion__title">
+                <h4 class="rate">Pro care</h4>
+                <div class="circle-drop"></div>
+              </div>
+              <div class="line-drop"></div>
+              <p class="text-drop">
+                Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+              </p>
+              <h3 class="price-drop">
+                <span class="price-span">
+                  <span class="price-span-baks">
+                    $
+                  </span>
+                  35
+                </span> / per hour
+              </h3>
+              <button class="price__order-btn">
+                <a href="#contacts" class="link js-scroll price__contacts">
+                  Order
+                </a>
+              </button>
             </div>
           </div>
         </div>
@@ -172,15 +243,84 @@
           <form class="form__cities">
             <div class="form__items">
               <select title='Y' class="select_city" name="city" id='city'>
-                <option value="">City</option>
+                <option value="City, NY">City</option>
                 <option value="Canandaigua, NY">Canandaigua, NY</option>
                 <option value="New York City, NY">New York City</option>
                 <option value="Yonkers, NY">Yonkers, NY</option>
                 <option value="Sherrill, NY">Sherrill, NY</option>
               </select>
-              <div class="circle circle_form"></div>
+              <div class="circle circle_form">
+              </div>
             </div>
           </form>
+          <div class="card__city canandaigua card__city-hidden">
+            <div class="info__for-city">
+              <div class="info__for-city-city">
+                <span class="contacts-text contacts-text-city">City:</span>
+                <span class="contacts-text-info">Canandaigua, NY</span>
+              </div>
+              <div class="info__for-city-phone">
+                <span class="contacts-text contacts-text-phone">Phone:</span>
+                <span class="contacts-text-info">+1 585 393 0001</span>
+              </div>
+              <div class="info__for-city-adress">
+                <span class="contacts-text">Office address:</span>
+                <span class="contacts-text-info">151 Charlotte Street</span>
+              </div>
+              <button class="contacts-btn"><a href="tel:+15853930001" class="contacts-tel">Call us</a></button>
+            </div>
+          </div>
+          <div class="card__city new-york-city card__city-hidden">
+            <div class="info__for-city">
+              <div class="info__for-city-city">
+                <span class="contacts-text contacts-text-city">City:</span>
+                <span class="contacts-text-info">New York City</span>
+              </div>
+              <div class="info__for-city-phone">
+                <span class="contacts-text contacts-text-phone">Phone:</span>
+                <span class="contacts-text-info">+1 212 456 0002</span>
+              </div>
+              <div class="info__for-city-adress">
+                <span class="contacts-text">Office address:</span>
+                <span class="contacts-text-info">9 East 91st Street</span>
+              </div>
+              <button class="contacts-btn"><a href="tel:+12124560002" class="contacts-tel">Call us</a></button>
+            </div>
+          </div>
+          <div class="card__city yonkers card__city-hidden">
+            <div class="info__for-city">
+              <div class="info__for-city-city">
+                <span class="contacts-text contacts-text-city">City:</span>
+                <span class="contacts-text-info">Yonkers, NY</span>
+              </div>
+              <div class="info__for-city-phone">
+                <span class="contacts-text contacts-text-phone">Phone:</span>
+                <span class="contacts-text-info">+1 914 678 0003</span>
+              </div>
+              <div class="info__for-city-adress">
+                <span class="contacts-text">Office address:</span>
+                <span class="contacts-text-info">151 Charlotte Street</span>
+              </div>
+              <button class="contacts-btn"><a href="tel:+19146780003" class="contacts-tel">Call us</a></button>
+            </div>
+          </div>
+          <div class="card__city sherrill card__city-hidden">
+            <div class="info__for-city">
+              <div class="info__for-city-city">
+                <span class="contacts-text contacts-text-city">City:</span>
+                <span class="contacts-text-info">Sherrill, NY</span>
+              </div>
+              <div class="info__for-city-phone">
+                <span class="contacts-text contacts-text-phone">Phone:</span>
+                <span class="contacts-text-info">+1 315 908 0004</span>
+              </div>
+              <div class="info__for-city-adress">
+                <span class="contacts-text">Office address:</span>
+                <span class="contacts-text-info">14 WEST Noyes BLVD</span>
+              </div>
+              <button class="contacts-btn"><a href="tel:+13159080004" class="contacts-tel">Call us</a></button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
