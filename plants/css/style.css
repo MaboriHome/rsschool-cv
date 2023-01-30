@@ -316,6 +316,12 @@ select {
 }
 
 .service__nav_btn:hover {
+  background-color: #7d78e3;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.service__nav_btn-focus {
   background-color: #e06733;
   color: #ffffff;
   cursor: pointer;
@@ -337,6 +343,10 @@ select {
   height: 450px;
   border-radius: 20px 20px 0px 0px;
   overflow: hidden;
+}
+
+.service__list_item-blur {
+  filter: blur(5px);
 }
 
 .service__list_img {
@@ -427,6 +437,7 @@ select {
   width: 250px;
   height: 50px;
   background: #edf2ec;
+  border: 0;
   border-radius: 20px;
 }
 
@@ -532,6 +543,7 @@ select {
   background: url('../img/contact_woman.png');
 }
 .contacts__info {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 709px;
@@ -573,6 +585,10 @@ select {
   color: #717171;
   background-color: transparent;
   border: none;
+}
+
+option {
+  color: #717171;
 }
 .circle_form::after {
   width: 6px;
@@ -1189,4 +1205,211 @@ select {
   .footer__rslogo {
     margin: -12px -4px -1px 0;
   }
+}
+
+.dropbtn {
+  /* background-color: #3498db; */
+  /* color: white; */
+  /* padding: 16px; */
+  /* font-size: 16px; */
+  /* border: none; */
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #d6e7d2;
+}
+
+.dropdown {
+  position: relative;
+  /* display: inline-block; */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 250px;
+  height: 154px;
+  left: 40px;
+  top: 33px;
+  background: #d6e7d2;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  color: black;
+
+  text-decoration: none;
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+.circle-drop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #aea1a1;
+  transform: rotate(-180deg);
+}
+
+.circle-drop::after {
+  width: 6px;
+  height: 4px;
+  box-sizing: border-box;
+  background-image: url('../img/svg/arrow_form-drop.svg');
+  background-repeat: no-repeat;
+  color: #ffffff;
+  content: '';
+  transition: transform 0.2s ease-out;
+}
+
+.line-drop {
+  width: 164px;
+  height: 0px;
+  border-bottom: 0.5px solid #aea1a1;
+  margin: 0 auto;
+  margin-bottom: 6px;
+  margin-top: -5px;
+}
+
+.text-drop {
+  width: 169px;
+  height: 30px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 10px;
+  color: #717171;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.price-drop {
+  width: 123px;
+  height: 17px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000;
+  margin: 5px 0px 0 41px;
+}
+.price-span {
+  font-weight: 700;
+  color: #e06733;
+  font-size: 16px;
+}
+.price-span-baks {
+  font-size: 12px;
+}
+
+.price__order-btn {
+  width: 86px;
+  height: 25px;
+  margin: 12px 0 0 39px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #717171;
+  background: #ffffff;
+  border: 0px;
+  border-radius: 10px;
+}
+
+.dropdown-content-standard {
+  top: 115px;
+}
+.dropdown-content-procare {
+  top: 199px;
+}
+
+.select_city:hover {
+  background-color: #c1e698;
+}
+
+.card__city {
+  box-sizing: border-box;
+  position: absolute;
+  width: 448px;
+  height: 214px;
+  top: 170px;
+  left: 260px;
+  background: #edf2ec;
+  border: 1px solid #000000;
+  border-radius: 20px;
+}
+
+.info__for-city {
+  width: 339px;
+  height: 165px;
+  margin: 17px 76px 32px 33px;
+}
+
+.info__for-city-city {
+  height: 40px;
+}
+
+.contacts-text {
+  width: 127px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.contacts-text-city {
+  padding-right: 93px;
+}
+.contacts-text-phone {
+  padding-right: 67px;
+}
+.contacts-text-info {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #717171;
+  padding-left: 10px;
+}
+
+.contacts-btn {
+  box-sizing: border-box;
+  position: absolute;
+  width: 122px;
+  height: 26px;
+  left: 170px;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+.contacts-tel {
+  text-decoration: none;
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  color: #717171;
+}
+
+.card__city-hidden {
+  display: none;
 }
